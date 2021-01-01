@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Training_Diary"
         mc:Ignorable="d"
-        Title="Дневник тренировок" Height="1035" Width="1920" WindowState="Maximized" Icon="img/Sport.ico"  >
-    <Grid>
-        
+        Title="Дневник тренировок" Height="1035" Width="1920" WindowState="Maximized" Icon="icons/Sport.ico"  >
+    <Grid >
+        <Grid.Background>
+            <ImageBrush ImageSource="img/background.jpg"></ImageBrush>
+        </Grid.Background>
+        <StackPanel Margin="10,0,10,0">
+            <StackPanel Orientation="Horizontal" x:Name="MenuPanel" Margin="0" Height="60" VerticalAlignment="Top">
+                <Button Uid="0" Width="150" Height="50" Content="ГЛАВНАЯ" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="white" Margin="0, 0, 20, 0" x:Name="Main"  Cursor="Hand" Click="Main_Click"/>
+                <Button Uid="1" Width="150" Height="50" Content="СТАТИСТИКА" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="white" Margin="0, 0, 20, 0" x:Name="Statistic"  Cursor="Hand" Click="Statistic_Click"/>
+                <Button Uid="2" Width="150" Height="50" Content="НАСТРОЙКИ" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="white" Margin="0, 0, 20, 0" x:Name="Settings"  Cursor="Hand" Click="Settings_Click"/>
+                <Button Uid="3" Width="150" Height="50" Content="РАЗРАБОТЧИКИ" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="white" Margin="0, 0, 20, 0" x:Name="Developers"  Cursor="Hand" Click="Developers_Click"/>
+
+            </StackPanel>
+            <Grid x:Name="GridCursorMenu" Width="150" Height="5" Background="#FF2196F3" HorizontalAlignment="Left" Margin="0, -5, 0, 0"/>
+        </StackPanel>
     </Grid>
 </Window>
